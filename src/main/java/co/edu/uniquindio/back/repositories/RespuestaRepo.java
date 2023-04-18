@@ -19,7 +19,8 @@ public interface RespuestaRepo extends JpaRepository<Respuesta, Integer> {
             "from respuesta rr " +
             "where rr.valoracion = 0 " +
             "and rr.id_pregunta = r.id_pregunta ) incorrectas from respuesta r join pregunta p " +
-            "on r.id_pregunta = p.id_pregunta", nativeQuery = true)
+            "on r.id_pregunta = p.id_pregunta" +
+            "group by p.enunciado", nativeQuery = true)
     List<Object[]> getPreguntasTyF();
 
     @Query(value = "select p.enunciado, avg(valoracion) Promedio_Global " +
