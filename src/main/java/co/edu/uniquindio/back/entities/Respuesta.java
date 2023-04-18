@@ -17,16 +17,16 @@ public class Respuesta {
     private int idPregunta;
 
 
-    private int idEstudiante;
+    private int idParticipante;
 
     @Column (nullable = false)
     private int valoracion;
     public Respuesta() {
     }
 
-    public Respuesta(int idPregunta, int idEstudiante, int valoracion) {
+    public Respuesta(int idPregunta, int idParticipante, int valoracion) {
         this.idPregunta = idPregunta;
-        this.idEstudiante = idEstudiante;
+        this.idParticipante = idParticipante;
         this.valoracion = valoracion;
     }
 }

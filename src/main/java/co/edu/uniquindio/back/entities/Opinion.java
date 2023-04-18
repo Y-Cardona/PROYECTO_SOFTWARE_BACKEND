@@ -15,7 +15,7 @@ public class Opinion {
 
     private int idItem;
 
-    private int idEstudiante;
+    private int idParticipante;
 
     @Column (nullable = false)
     private int valoracion;
@@ -23,9 +23,9 @@ public class Opinion {
     public Opinion() {
     }
 
-    public Opinion(int idItem, int idEstudiante, int valoracion) {
+    public Opinion(int idItem, int idParticipante, int valoracion) {
         this.idItem = idItem;
-        this.idEstudiante = idEstudiante;
+        this.idParticipante = idParticipante;
         this.valoracion = valoracion;
     }
 }
